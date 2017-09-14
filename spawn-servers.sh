@@ -32,9 +32,9 @@ do
     echo "Setting floating IP"
     openstack server add floating ip $serverHostname $floatingIp
 
-    echo $floatingIp >> servers
+    echo "$serverHostname	$floatingIp" >> serverlist
     echo "Server $serverHostname ($floatingIp) configured"
 done <"hostnames"
 
-echo "IP list:"
-cat servers
+echo "Server list:"
+cat serverlist
