@@ -7,7 +7,6 @@ echo "Using image $imageID"
 networkID=$(openstack network list -f value | grep "acmeair-network" | awk -F ' ' '{print $1}')
 echo "Using network $networkID"
 keyName='skyhigh-martisny'
-rm servers
 
 while IFS= read -r serverHostname
 do
