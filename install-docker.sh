@@ -14,4 +14,9 @@ sudo yum install -y docker-ce
 sudo systemctl enable docker
 sudo gpasswd -a $USER docker
 
-sudo reboot now
+sudo yum install -y firewalld
+sudo service firewalld start
+sudo firewall-cmd --permanent --zone=public --add-service=http
+sudo firewall-cmd --reload
+
+sudo reboot
