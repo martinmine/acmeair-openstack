@@ -6,7 +6,7 @@ imageID=$(openstack image list --property name="CentOS 7 x86_64" -c ID -f value)
 echo "Using image $imageID"
 networkID=$(openstack network list -f value | grep "acmeair-network" | awk -F ' ' '{print $1}')
 echo "Using network $networkID"
-keyName='skyhigh'
+keyName='skyhigh-martisny'
 
 while IFS= read -r serverHostname
 do
