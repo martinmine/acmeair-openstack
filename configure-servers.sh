@@ -8,6 +8,6 @@ do
     
     echo "Configuring server $serverName"
     scp -oStrictHostKeyChecking=no install-docker.sh $serverName:.
-    ssh -oStrictHostKeyChecking=no $serverName ./install-docker.sh
+    ssh -n -oStrictHostKeyChecking=no $serverName ./install-docker.sh
 
 done <"serverlist"
