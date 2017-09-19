@@ -7,7 +7,7 @@ do
     serverIp=$(echo $serverEntry | awk '{print $2}')
     
     echo "Configuring server $serverName"
-    scp -oStrictHostKeyChecking=no install-docker.sh $serverName:.
+    scp -q -oStrictHostKeyChecking=no install-docker.sh $serverName:.
     ssh -n -oStrictHostKeyChecking=no $serverName ./install-docker.sh
 
 done <"serverlist"

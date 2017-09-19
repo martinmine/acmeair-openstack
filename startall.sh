@@ -9,7 +9,7 @@ do
     serviceName=$(echo $serverEntry | awk '{print $3}')
     
     echo "Initiating service $serviceName@$serverName"
-    scp start/$serviceName.sh $serverName:.
+    scp -q start/$serviceName.sh $serverName:.
     ssh -n $serverName ./$serviceName.sh fast
 
 done <"serverlist"
