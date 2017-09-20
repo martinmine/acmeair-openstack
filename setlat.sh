@@ -15,3 +15,7 @@ do
     ssh -n $serverName ./_setlat.sh $latency
 
 done <"serverlist"
+
+scp -q _setlat.sh acmeair-jmeter1:.
+ssh -n acmeair-jmeter1 ./_setlat.sh $latency
+

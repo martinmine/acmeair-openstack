@@ -10,6 +10,10 @@ do
     
     echo "Initiating service $serviceName@$serverName"
     scp -q start/$serviceName.sh $serverName:.
-    ssh -n $serverName ./$serviceName.sh fast
+    ssh -n $serverName ./$serviceName.sh
 
 done <"serverlist"
+
+echo "Waiting 5 seconds for servers to spawn"
+sleep 5
+./populate.sh
