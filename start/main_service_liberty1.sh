@@ -7,4 +7,4 @@ if [[ "$1" != "fast" ]]; then
 fi 
 
 docker run -d --network="local-net" -p 80:80 --name main_service_liberty1 martinmine/acmeairjava_main_service_liberty1
-docker run -d --network="local-net" -p 5683:5683/udp --name proxy martinmine/coap-gateway 5683 8080
+docker run -d --network="local-net" -p 5683:5683/udp --name proxy martinmine/coap-gateway --mode=coap

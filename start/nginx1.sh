@@ -8,4 +8,4 @@ fi
 
 docker network create --driver bridge local-net
 docker run -d --network="local-net" -p 80:80 --name nginx1 martinmine/acmeairjava_nginx1
-docker run -d --network="local-net" -p 8080:8080 --name proxy martinmine/coap-gateway 5683 8080
+docker run -d --network="local-net" -p 8080:8080 --name proxy martinmine/coap-gateway --mode=http
