@@ -7,5 +7,5 @@ if [[ "$1" != "fast" ]]; then
 fi 
 
 docker network create --driver bridge local-net
+docker run -d --network="local-net" -p 8080:8080 --name coapproxy martinmine/coap-gateway --mode=http
 docker run -d --network="local-net" -p 80:80 --name nginx1 martinmine/acmeairjava_nginx1
-docker run -d --network="local-net" -p 8080:8080 --name proxy martinmine/coap-gateway --mode=http

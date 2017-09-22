@@ -1,7 +1,7 @@
 acmeair-host1	172.16.1.130	nginx1
-acmeair-host2	172.16.1.54	main_service_liberty1
-acmeair-host3	172.16.1.139	auth_service_liberty1
-acmeair-host4	172.16.1.110	booking_service_liberty1
-acmeair-host5	172.16.1.137	customer_service_liberty1
-acmeair-host6	172.16.1.3	flight_service_liberty1
-acmeair-host7	172.16.1.145	support_service_liberty1
+acmeair-host2	172.16.1.54	main-service-liberty1
+acmeair-host3	172.16.1.139	auth-service-liberty1
+acmeair-host4	172.16.1.110	booking-service-liberty1
+acmeair-host5	172.16.1.137	customer-service-liberty1
+acmeair-host6	172.16.1.3	flight-service-liberty1
+acmeair-host7	172.16.1.145	support-service-liberty1
