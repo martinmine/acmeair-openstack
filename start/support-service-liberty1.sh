@@ -5,6 +5,7 @@ docker rm $(docker ps -a -q)
 
 if [[ "$1" != "fast" ]]; then 
     docker pull martinmine/acmeairjava_support_service_liberty1
+    docker pull martinmine/coap-gateway
 fi
 
 docker network create --driver bridge local-net
