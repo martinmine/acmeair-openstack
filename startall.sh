@@ -14,6 +14,6 @@ do
 
 done <"serverlist"
 
-echo "Waiting 5 seconds for servers to spawn"
-sleep 5
+echo "Waiting 30 seconds for servers to spawn"
+sleep 30
 ./populate.sh
